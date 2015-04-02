@@ -2,10 +2,9 @@
 //  ViewController.m
 //  SuperHeroPedia
 //
-//  Created by Matt Larkin on 4/2/15.
-//  Copyright (c) 2015 Matt Larkin. All rights reserved.
+//  Created by Dave Krawczyk on 9/6/14.
+//  Copyright (c) 2014 Mobile Makers. All rights reserved.
 //
-
 
 #import "SuperHero.h"
 
@@ -24,6 +23,7 @@
     [super viewDidLoad];
 
     [SuperHero retrieveSuperHerosWithCompletion:^(NSArray *superHeros) {
+
         self.heroes = superHeros;
 
         SuperHero *s1 = self.heroes[0];
@@ -35,7 +35,7 @@
 
 }
 
--(void)setHeroes:(NSArray *)heroes
+- (void)setHeroes:(NSArray *)heroes
 {
     _heroes = heroes;
     [self.tableView reloadData];
